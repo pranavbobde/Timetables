@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CourseName: MyString
+  ProgDirector: MyString
+  ProgFaculty: MyString
+
+two:
+  CourseName: MyString
+  ProgDirector: MyString
+  ProgFaculty: MyString
