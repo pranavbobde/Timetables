@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Faculties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>School</th>
+      <th>Phonenumber</th>
+      <th>Email</th>
+      <th>Room</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faculties.each do |faculty| %>
+      <tr>
+        <td><%= faculty.name %></td>
+        <td><%= faculty.school %></td>
+        <td><%= faculty.phonenumber %></td>
+        <td><%= faculty.email %></td>
+        <td><%= faculty.room %></td>
+        <td><%= faculty.type %></td>
+        <td><%= link_to 'Show', faculty %></td>
+        <td><%= link_to 'Edit', edit_faculty_path(faculty) %></td>
+        <td><%= link_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Faculty', new_faculty_path %>

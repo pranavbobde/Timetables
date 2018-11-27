@@ -10,20 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_143606) do
+ActiveRecord::Schema.define(version: 2018_11_27_163818) do
 
   create_table "courses", force: :cascade do |t|
-    t.string "CourseName"
-    t.string "ProgDirector"
-    t.string "ProgFaculty"
+    t.string "coursename"
+    t.integer "faculty_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["faculty_id"], name: "index_courses_on_faculty_id"
+  end
+
+  create_table "faculties", force: :cascade do |t|
+    t.string "name"
+    t.string "school"
+    t.integer "phonenumber"
+    t.string "email"
+    t.integer "room_id"
+    t.integer "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_faculties_on_room_id"
   end
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"
     t.integer "floor"
     t.integer "seating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "classname"
+    t.integer "course_id"
+    t.integer "faculty_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_subjects_on_course_id"
+    t.index ["faculty_id"], name: "index_subjects_on_faculty_id"
+  end
+
+  create_table "time_slots", force: :cascade do |t|
+    t.date "Date"
+    t.time "StartTime"
+    t.time "EndTime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
