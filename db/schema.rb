@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_163818) do
+ActiveRecord::Schema.define(version: 2018_11_27_172907) do
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "email"
+    t.integer "room_id"
+    t.integer "timeslot_id"
+    t.integer "status"
+    t.boolean "supervision"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_bookings_on_room_id"
+    t.index ["timeslot_id"], name: "index_bookings_on_timeslot_id"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "coursename"

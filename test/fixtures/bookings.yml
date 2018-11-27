@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  room: one
+  timeslot: one
+  status: 1
+  supervision: false
+
+two:
+  email: MyString
+  room: two
+  timeslot: two
+  status: 1
+  supervision: false

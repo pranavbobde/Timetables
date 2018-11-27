@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bookings
   resources :courses
   resources :time_slots
   resources :faculties
