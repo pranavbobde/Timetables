@@ -1,2 +1,19 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
 <h1>Hello World</h1>
 <h2>This is the timetabling system</h2>
+<p><%=@hello%></p>
+<table>
+    <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td>Room: <%= room.name %></td>
+        <td>Floor: <%= room.floor %></td>
+        <td>Seats Available: <%= room.seating %></td>
+      </tr>
+    <% end %>       
+    </tbody>
+</table>
+ 
