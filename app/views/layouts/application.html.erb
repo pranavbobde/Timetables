@@ -17,6 +17,14 @@
       <%= link_to'Register', new_user_registration_path %> or
       <%= link_to'Sign in', new_user_session_path %>
      <% end %>
+     <a href="<%=root_path%>">Home</a>
+     <a href="<%=rooms_path%>">New Room</a>
+     <a href="<%=faculties_path%>">New Faculty</a>
+     <a href="<%=courses_path%>">Course</a>
+     <a href="<%=subjects_path%>">Subjects</a>
+     <a href="<%=bookings_path%>">Booking</a>
+     <a href="<%=time_slots_path%>">Time Slot</a>
+     
     <%= yield %>
     
   </body>

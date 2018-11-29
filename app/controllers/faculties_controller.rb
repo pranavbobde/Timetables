@@ -1,7 +1,14 @@
 class FacultiesController < ApplicationController
   before_action :authenticate_user!
+  before_action :ensure_admin, :only => [:edit, :destroy, :new]
   before_action :set_faculty, only: [:show, :edit, :update, :destroy]
 
+  def ensure_admin
+    unless current_user && current_user.admin?
+      render :text => "Access Error Message", :status => :unauthorized
+    end
+  end
+  
   # GET /faculties
   # GET /faculties.json
   def index
@@ -70,6 +77,6 @@ class FacultiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def faculty_params
-      params.require(:faculty).permit(:name, :school, :phonenumber, :email, :room_id, :type)
+      params.require(:faculty).permit(:name, :school, :phonenumber, :email, :room_id, :stafftype)
     end
 end

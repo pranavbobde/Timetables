@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_160114) do
+ActiveRecord::Schema.define(version: 2018_11_29_180243) do
 
   create_table "bookings", force: :cascade do |t|
     t.string "email"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_160114) do
     t.integer "phonenumber"
     t.string "email"
     t.integer "room_id"
-    t.integer "type"
+    t.integer "stafftype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_faculties_on_room_id"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_160114) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
