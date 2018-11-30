@@ -1,13 +1,13 @@
 class FacultiesController < ApplicationController
   before_action :authenticate_user!
-  before_action :ensure_admin, :only => [:edit, :destroy, :new]
+  #before_action :ensure_admin, :only => [:edit, :destroy, :new]
   before_action :set_faculty, only: [:show, :edit, :update, :destroy]
 
-  def ensure_admin
-    unless current_user && current_user.admin?
-      render :text => "Access Error Message", :status => :unauthorized
-    end
-  end
+  # def ensure_admin
+  #   unless current_user && current_user.admin?
+  #     render :text => "Access Error Message", :status => :unauthorized
+  #   end
+  # end
   
   # GET /faculties
   # GET /faculties.json

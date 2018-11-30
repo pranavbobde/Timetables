@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_30_143905) do
+ActiveRecord::Schema.define(version: 2018_11_30_161427) do
 
   create_table "bookings", force: :cascade do |t|
     t.string "email"
@@ -56,10 +56,10 @@ ActiveRecord::Schema.define(version: 2018_11_30_143905) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "classname"
-    t.integer "course_id"
-    t.integer "faculty_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "course_id"
+    t.integer "faculty_id"
     t.index ["course_id"], name: "index_subjects_on_course_id"
     t.index ["faculty_id"], name: "index_subjects_on_faculty_id"
   end
