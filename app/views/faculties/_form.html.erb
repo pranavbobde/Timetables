@@ -33,8 +33,6 @@
 
   <div class="field">
     <%= form.label :room_id %>
-    
-    
     <%= form.select :room_id, options_for_select(Room.all.map{|s|[s.name, s.id]}) %>
     <!--sets the room_id based the options from all the rooms names -->
 

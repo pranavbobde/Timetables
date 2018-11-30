@@ -3,6 +3,7 @@
 one:
   email: MyString
   room: one
+  subject: one
   timeslot: one
   status: 1
   supervision: false
@@ -10,6 +11,7 @@ one:
 two:
   email: MyString
   room: two
+  subject: two
   timeslot: two
   status: 1
   supervision: false

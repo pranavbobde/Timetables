@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_180243) do
+ActiveRecord::Schema.define(version: 2018_11_30_143905) do
 
   create_table "bookings", force: :cascade do |t|
     t.string "email"
     t.integer "room_id"
+    t.integer "subject_id"
     t.integer "timeslot_id"
     t.integer "status"
     t.boolean "supervision"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_bookings_on_room_id"
+    t.index ["subject_id"], name: "index_bookings_on_subject_id"
     t.index ["timeslot_id"], name: "index_bookings_on_timeslot_id"
   end
 
@@ -62,10 +64,9 @@ ActiveRecord::Schema.define(version: 2018_11_29_180243) do
     t.index ["faculty_id"], name: "index_subjects_on_faculty_id"
   end
 
-  create_table "time_slots", force: :cascade do |t|
-    t.date "Date"
-    t.time "StartTime"
-    t.time "EndTime"
+  create_table "timeslots", force: :cascade do |t|
+    t.datetime "start"
+    t.datetime "end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

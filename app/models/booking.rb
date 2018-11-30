@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
-  has_one :room
-  has_one :timeslot
-  has_one :subject
+  belongs_to :room
+  belongs_to :subject
+  belongs_to :timeslot
   enum status: [ :pending, :approved, :rejected]
 
 end

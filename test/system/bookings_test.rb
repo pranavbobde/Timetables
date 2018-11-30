@@ -17,6 +17,7 @@ class BookingsTest < ApplicationSystemTestCase
     fill_in "Email", with: @booking.email
     fill_in "Room", with: @booking.room_id
     fill_in "Status", with: @booking.status
+    fill_in "Subject", with: @booking.subject_id
     fill_in "Supervision", with: @booking.supervision
     fill_in "Timeslot", with: @booking.timeslot_id
     click_on "Create Booking"
@@ -32,6 +33,7 @@ class BookingsTest < ApplicationSystemTestCase
     fill_in "Email", with: @booking.email
     fill_in "Room", with: @booking.room_id
     fill_in "Status", with: @booking.status
+    fill_in "Subject", with: @booking.subject_id
     fill_in "Supervision", with: @booking.supervision
     fill_in "Timeslot", with: @booking.timeslot_id
     click_on "Update Booking"

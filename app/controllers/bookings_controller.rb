@@ -1,13 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :ensure_admin, :only => [:edit, :destroy, :new]
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
-  def ensure_admin
-    unless current_user && current_user.admin?
-    render :text => "Access Error Message", :status => :unauthorized
-    end
-  end
   # GET /bookings
   # GET /bookings.json
   def index
@@ -76,6 +69,6 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:email, :room_id, :timeslot_id, :status, :supervision)
+      params.require(:booking).permit(:email, :room_id, :subject_id, :timeslot_id, :status, :supervision)
     end
 end

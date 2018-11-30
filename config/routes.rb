@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
   resources :bookings
+  resources :timeslots
+  devise_for :users
   resources :courses
-  resources :time_slots
   resources :faculties
   resources :subjects
   resources :rooms
