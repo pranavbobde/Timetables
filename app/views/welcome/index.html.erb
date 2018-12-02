@@ -7,11 +7,11 @@
 <p><%=@hello%></p>
 <table>
     <tbody>
-    <% @rooms.each do |room| %>
+    <% @bookings.each do |booking| %>
       <tr>
-        <td>Room: <%= room.name %></td>
-        <td>Floor: <%= room.floor %></td>
-        <td>Seats Available: <%= room.seating %></td>
+        <td>Email: <%= booking.email %></td>
+        <td>Date: <%= booking.timeslot.start %></td>
+        
       </tr>
     <% end %>       
     </tbody>

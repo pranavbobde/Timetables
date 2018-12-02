@@ -22,7 +22,8 @@
         <td><%= faculty.school %></td>
         <td><%= faculty.phonenumber %></td>
         <td><%= faculty.email %></td>
-        <td><%= faculty.room %></td>
+        <td><%= faculty.room.name %></td>
+        
         <td><%= faculty.stafftype %></td>
         <td><%= link_to 'Show', faculty %></td>
         <td><%= link_to 'Edit', edit_faculty_path(faculty) %></td>

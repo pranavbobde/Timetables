@@ -1,4 +1,4 @@
 class Subject < ApplicationRecord
-  belongs_to :course, optional: true
-  belongs_to :faculty, optional: true
+  belongs_to :course, optional: true, :dependent => :destroy
+  belongs_to :faculty, optional: true, :dependent => :destroy
 end
