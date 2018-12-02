@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  
+  require 'bookings_logger'
+  
+  before_action :authenticate_user!
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   # GET /bookings
@@ -35,6 +39,18 @@ class BookingsController < ApplicationController
         format.json { render json: @booking.errors, status: :unprocessable_entity }
       end
     end
+#for logging the information
+  
+  
+  
+    @description = "A Booking was created: "+ [@booking.email, @booking.room.name, @booking.subject.classname, @booking.date, @booking.starttime, @booking.duration, @booking.status, @booking.supervision].to_s
+    BookingsLogger.instance.logBookings(@description)
+
+    
+
+  
+   
+    
   end
 
   # PATCH/PUT /bookings/1
@@ -49,6 +65,18 @@ class BookingsController < ApplicationController
         format.json { render json: @booking.errors, status: :unprocessable_entity }
       end
     end
+    #for logging the information
+    @booking.email = params[:booking][:email]
+    @booking.room_id = params[:booking][:room_id]
+    @booking.subject_id = params[:booking][:subject_id]
+    @booking.date = params[:booking][:date]
+    @booking.starttime = params[:booking][:starttime]
+    @booking.duration = params[:booking][:duration]
+    @booking.status = params[:booking][:status]
+    @booking.supervision = params[:booking][:supervision]
+    @description = [@booking.email, @booking.room_id, @booking.subject_id, @booking.date, @booking.starttime, @booking.duration, @booking.status, @booking.supervision].to_s
+    logger = BookingsLogger.instance
+    logger.logBookings("A Booking was updated" + @description.to_s)
   end
 
   # DELETE /bookings/1
@@ -69,6 +97,6 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:email, :room_id, :subject_id, :timeslot_id, :status, :supervision)
+      params.require(:booking).permit(:email, :room_id, :subject_id, :date, :starttime, :duration, :status, :supervision)
     end
 end

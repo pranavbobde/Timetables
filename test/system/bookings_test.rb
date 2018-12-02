@@ -14,12 +14,13 @@ class BookingsTest < ApplicationSystemTestCase
     visit bookings_url
     click_on "New Booking"
 
+    fill_in "Duration", with: @booking.duration
     fill_in "Email", with: @booking.email
     fill_in "Room", with: @booking.room_id
+    fill_in "Starttime", with: @booking.starttime
     fill_in "Status", with: @booking.status
     fill_in "Subject", with: @booking.subject_id
     fill_in "Supervision", with: @booking.supervision
-    fill_in "Timeslot", with: @booking.timeslot_id
     click_on "Create Booking"
 
     assert_text "Booking was successfully created"
@@ -30,12 +31,13 @@ class BookingsTest < ApplicationSystemTestCase
     visit bookings_url
     click_on "Edit", match: :first
 
+    fill_in "Duration", with: @booking.duration
     fill_in "Email", with: @booking.email
     fill_in "Room", with: @booking.room_id
+    fill_in "Starttime", with: @booking.starttime
     fill_in "Status", with: @booking.status
     fill_in "Subject", with: @booking.subject_id
     fill_in "Supervision", with: @booking.supervision
-    fill_in "Timeslot", with: @booking.timeslot_id
     click_on "Update Booking"
 
     assert_text "Booking was successfully updated"

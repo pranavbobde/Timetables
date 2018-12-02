@@ -10,7 +10,8 @@
     <% @bookings.each do |booking| %>
       <tr>
         <td>Email: <%= booking.email %></td>
-        <td>Date: <%= booking.timeslot.start %></td>
+        <td>Room: <%= booking.room.name %></td>
+        <td>Date: <%= booking.date %></td>
         
       </tr>
     <% end %>       

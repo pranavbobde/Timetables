@@ -57,27 +57,15 @@ subject_list = [
 ]
 
 
-subject_list.each do |s|
-    classname = s
-    course = Course.all.sample
-    faculty = Faculty.all.sample
-    
-    if !Subject.exists?(classname: classname)
-        Subject.create(classname: classname, course: course, faculty: faculty)
+
+###The order of these seed methods is import. Do not try to see a 
+###table with onjects that may not exist yet.
+
+room_list.each do |name, floor|
+    if !Room.exists?(name: name)
+        Room.create( name: name, floor: floor, seating: 30 )
     end
 end
-
-
-course_list.each do |c|
-    coursename = c
-    faculty = Faculty.all.sample
-    if !Course.exists?(coursename: coursename)
-        
-        Course.create(coursename: coursename, faculty: faculty)
-    end
-end
-
-
 
 name_list.each do |f,l|
     name = f + " " + l 
@@ -91,11 +79,34 @@ name_list.each do |f,l|
     end
 end
 
-
-
-
-room_list.each do |name, floor|
-    if !Room.exists?(name: name)
-        Room.create( name: name, floor: floor, seating: 30 )
+course_list.each do |c|
+    coursename = c
+    faculty = Faculty.all.sample
+    if !Course.exists?(coursename: coursename)
+        
+        Course.create(coursename: coursename, faculty: faculty)
     end
 end
+
+
+subject_list.each do |s|
+    classname = s
+    course = Course.all.sample
+    faculty = Faculty.all.sample
+    
+    if !Subject.exists?(classname: classname)
+        Subject.create(classname: classname, course: course, faculty: faculty)
+    end
+end
+
+
+
+
+
+
+
+
+
+
+
+

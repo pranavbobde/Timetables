@@ -25,18 +25,29 @@
   <div class="field">
     <%= form.label :subject_id %>
     <%= form.select :subject_id, options_for_select(Subject.all.map{|s|[s.classname, s.id]}) %>
+
+  </div>
+  
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+
   </div>
 
   <div class="field">
-    <%= form.label :timeslot_id %>
-    <%= form.select :timeslot_id, options_for_select(Timeslot.all.map{|s|[s.start, s.id]}) %>
+    <%= form.label :starttime %>
+    <%= form.select :starttime, Booking.starttimes.keys %>
 
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.select :duration, Booking.durations.keys %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
     <%= form.select :status, Booking.statuses.keys %>
-
   </div>
 
   <div class="field">

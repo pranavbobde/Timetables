@@ -8,7 +8,9 @@
       <th>Email</th>
       <th>Room</th>
       <th>Subject</th>
-      <th>Timeslot</th>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>Duration</th>
       <th>Status</th>
       <th>Supervision</th>
       <th colspan="3"></th>
@@ -19,9 +21,11 @@
     <% @bookings.each do |booking| %>
       <tr>
         <td><%= booking.email %></td>
-        <td><%= booking.room %></td>
-        <td><%= booking.subject %></td>
-        <td><%= booking.timeslot %></td>
+        <td><%= booking.room.name %></td>
+        <td><%= booking.subject.classname %></td>
+        <td><%= booking.date %></td>
+        <td><%= booking.starttime %></td>
+        <td><%= booking.duration %></td>
         <td><%= booking.status %></td>
         <td><%= booking.supervision %></td>
         <td><%= link_to 'Show', booking %></td>

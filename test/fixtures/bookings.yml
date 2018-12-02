@@ -4,7 +4,8 @@ one:
   email: MyString
   room: one
   subject: one
-  timeslot: one
+  starttime: 1
+  duration: 1
   status: 1
   supervision: false
 
@@ -12,6 +13,7 @@ two:
   email: MyString
   room: two
   subject: two
-  timeslot: two
+  starttime: 1
+  duration: 1
   status: 1
   supervision: false

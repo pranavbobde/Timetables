@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :admins
   resources :bookings
-  resources :timeslots
+  devise_for :admins
   devise_for :users
   resources :courses
   resources :faculties

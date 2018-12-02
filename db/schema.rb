@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_30_204527) do
+ActiveRecord::Schema.define(version: 2018_12_02_173520) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,14 +28,15 @@ ActiveRecord::Schema.define(version: 2018_11_30_204527) do
     t.string "email"
     t.integer "room_id"
     t.integer "subject_id"
-    t.integer "timeslot_id"
+    t.integer "starttime"
+    t.integer "duration"
     t.integer "status"
     t.boolean "supervision"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date"
     t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["subject_id"], name: "index_bookings_on_subject_id"
-    t.index ["timeslot_id"], name: "index_bookings_on_timeslot_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -74,13 +75,6 @@ ActiveRecord::Schema.define(version: 2018_11_30_204527) do
     t.integer "faculty_id"
     t.index ["course_id"], name: "index_subjects_on_course_id"
     t.index ["faculty_id"], name: "index_subjects_on_faculty_id"
-  end
-
-  create_table "timeslots", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "end"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

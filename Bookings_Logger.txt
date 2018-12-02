@@ -1,0 +1,13 @@
+A Booking was created["p12@34.s", 76, 39, nil, "8:30am", "1.5 Hours", "approved", true]
+A Booking was updated["p12@34.s", 65, 39, nil, "8am", "1.5 Hours", "approved", true]
+A Booking was created["asd@weq", 67, 48, nil, "9am", "1 Hour", "pending", true]
+A Booking was created["davidlakelly@gmail.com", 65, 39, nil, "8am", "30 Minutes", "pending", false]
+{"utf8"=>"✓", "authenticity_token"=>"b3FnPNiGTZqKIrECwk1wWSbo8yjrZTcX//U3e2/AHSSYH1RA50VycHG4ybT+PaVBEbTDShCYdKK/9UIJ+HGorA==", "booking"=><ActionController::Parameters {"email"=>"davidlakelly@gmail.com", "room_id"=>"65", "subject_id"=>"39", "date(1i)"=>"2018", "date(2i)"=>"12", "date(3i)"=>"2", "starttime"=>"8am", "duration"=>"30 Minutes", "status"=>"pending", "supervision"=>"0"} permitted: false>, "commit"=>"Create Booking", "controller"=>"bookings", "action"=>"create"}
+A Booking was created["davidlakelly@gmail.com", 65, 39, nil, "8am", "30 Minutes", "pending", false]
+davidlakelly@gmail.com
+A Booking was created["davidlakelly@gmail.com", 65, 39, Sun, 02 Dec 2018, "8am", "30 Minutes", "pending", false]
+davidlakelly@gmail.com
+A Booking was created["dfdsfsdfds@gmail.com", 77, 47, Sun, 02 Dec 2018, "8am", "30 Minutes", "pending", false]
+A Booking was created["test@gmail.com", "202", "Web Design", Sun, 02 Dec 2018, "8am", "30 Minutes", "pending", false]
+A Booking was createdHello ["test2", "101", "Web App Dev", Sun, 02 Dec 2018, "8am", "30 Minutes", "pending", false]
+A Booking was created: ["davidlakelly@gmail.com", "302", "Web App Dev", Sun, 02 Dec 2018, "8am", "30 Minutes", "approved", true]
