@@ -1,7 +1,12 @@
 class WelcomeController < ApplicationController
+  
     def index
         @hello = "This is a message"
-        @bookings = Booking.all
+        @today = Booking.where(date: Date.today)
+        @allaftertomorrow = Booking.where('DATE(date) > ?', Date.today)
+        @room = Booking.where("room_id = 65")
+        ##dont forget about named scopes
+        @monthyear = Date.today.strftime "%B%Y"
     end
     
     # def Admin_login

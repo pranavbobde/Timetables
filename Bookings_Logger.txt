@@ -11,3 +11,5 @@ A Booking was created["dfdsfsdfds@gmail.com", 77, 47, Sun, 02 Dec 2018, "8am", "
 A Booking was created["test@gmail.com", "202", "Web Design", Sun, 02 Dec 2018, "8am", "30 Minutes", "pending", false]
 A Booking was createdHello ["test2", "101", "Web App Dev", Sun, 02 Dec 2018, "8am", "30 Minutes", "pending", false]
 A Booking was created: ["davidlakelly@gmail.com", "302", "Web App Dev", Sun, 02 Dec 2018, "8am", "30 Minutes", "approved", true]
+A Booking was created: ["pra@123.c", "201", "Intro to Databases", Tue, 04 Dec 2018, "8:30am", "1 Hour", "pending", true]byadmin@email.com
+A Booking was created: ["xya@das.g", "303", "Software Engineering", Wed, 05 Dec 2018, "8:30am", "1.5 Hours", "approved", true]by pranavbobde@gmail.com

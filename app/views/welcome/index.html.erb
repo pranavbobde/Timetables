@@ -7,14 +7,55 @@
 <p><%=@hello%></p>
 <table>
     <tbody>
-    <% @bookings.each do |booking| %>
+      <h1>Todays Bookings</h1>
+    <% @today.each do |booking| %>
       <tr>
         <td>Email: <%= booking.email %></td>
         <td>Room: <%= booking.room.name %></td>
         <td>Date: <%= booking.date %></td>
         
       </tr>
-    <% end %>       
+    <% end %>      
+    
     </tbody>
 </table>
+
+<table>
+    <tbody>
+      <h1>All Other Bookings</h1>
+    <% @allaftertomorrow.each do |booking| %>
+      <tr>
+        <td>Email: <%= booking.email %></td>
+        <td>Room: <%= booking.room.name %></td>
+        <td>Date: <%= booking.date %></td>
+        
+      </tr>
+    <% end %>  
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+      <h1>Room 1</h1>
+    <% @room.each do |booking| %>
+      <tr>
+        <td>Email: <%= booking.email %></td>
+        <td>Room: <%= booking.room.name %></td>
+        <td>Date: <%= booking.date %></td>
+        
+      </tr>
+    <% end %>  
+    </tbody>
+</table>
+
+ 
+ 
+    <div>Calender for <%= @monthyear %> 
+      
+    </div>
+    
+    
+   
+
+
  

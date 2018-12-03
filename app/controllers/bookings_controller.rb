@@ -41,9 +41,9 @@ class BookingsController < ApplicationController
     end
 #for logging the information
   
+  @useremail = current_user.email
   
-  
-    @description = "A Booking was created: "+ [@booking.email, @booking.room.name, @booking.subject.classname, @booking.date, @booking.starttime, @booking.duration, @booking.status, @booking.supervision].to_s
+    @description = "A Booking was created: "+ [@booking.email, @booking.room.name, @booking.subject.classname, @booking.date, @booking.starttime, @booking.duration, @booking.status, @booking.supervision].to_s + "by " + @useremail
     BookingsLogger.instance.logBookings(@description)
 
     

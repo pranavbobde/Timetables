@@ -133,6 +133,8 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.2.1)
       sprockets-rails (>= 2.0.0)
+    rails-calendar (0.3.0)
+      rails (>= 3.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -168,6 +170,8 @@ GEM
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
+    simple_calendar (2.3.0)
+      rails (>= 3.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -219,8 +223,10 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.1)
+  rails-calendar
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_calendar (~> 2.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
