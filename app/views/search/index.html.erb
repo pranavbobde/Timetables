@@ -1,0 +1,23 @@
+<h1>Search#index</h1>
+<p>Find me in app/views/search/index.html.erb</p>
+<%= form_tag(search_index_path, method: :get,  multipart: true) do %>
+  Store <%= text_field_tag :name %>
+  <%= submit_tag 'submit' %>
+<% end %>
+
+
+<p><%=@txt %></p>
+
+<table>
+    <tbody>
+      <h1>Room 1</h1>
+    <% @rooms.each do |booking| %>
+      <tr>
+        <td>Email: <%= booking.email %></td>
+        <td>Room: <%= booking.room.name %></td>
+        <td>Date: <%= booking.date %></td>
+        
+      </tr>
+    <% end %>  
+    </tbody>
+</table>

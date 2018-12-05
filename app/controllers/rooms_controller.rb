@@ -1,8 +1,11 @@
 class RoomsController < ApplicationController
+  require 'rooms_decorator'
   before_action :authenticate_user!
   #before_action :ensure_admin, :only => [:edit, :destroy, :new]
   before_action :set_room, only: [:show, :edit, :update, :destroy]
-
+  
+  
+  
   # def ensure_admin
   #   unless current_user && current_user.admin?
   #     render :text => "Access Error Message", :status => :unauthorized
@@ -33,7 +36,23 @@ class RoomsController < ApplicationController
   # POST /rooms.json
   def create
     @room = Room.new(room_params)
-
+    @name = params[:room][:name]
+    @floor = params[:room][:floor].to_s
+    @seating = params[:room][:seating].to_s
+    myRoom = BasicRoom.new(@room.name, @room.floor, @room.seating, @room)
+    if params[:room][:projector].to_s.length > 0 then
+      myRoom = RoomWithProjector.new(myRoom)
+    end
+    
+    if params[:room][:computers].to_s.length > 0 then
+      myRoom = RoomWithComputer.new(myRoom)
+    end
+    if params[:room][:Audio_enhancements].to_s.length > 0 then
+      myRoom = RoomWithAudioEnhancements.new(myRoom)
+    end
+    
+    @room.description = myRoom.details
+    
     respond_to do |format|
       if @room.save
         format.html { redirect_to @room, notice: 'Room was successfully created.' }

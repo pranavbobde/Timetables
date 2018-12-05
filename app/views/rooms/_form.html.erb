@@ -26,7 +26,24 @@
     <%= form.text_field :seating %>
   </div>
 
+  <div class="field">
+    Projector:
+    <%= check_box_tag 'room[projector]', 'projector' %>
+  </div>
+  
+  <div class="field">
+    Computers:
+    <%= check_box_tag 'room[computers]', 'computers' %>
+  </div>
+  
+  <div class="field">
+    Audio Enhancements:
+    <%= check_box_tag 'room[Audio_enhancements]', 'Audio_enhancements' %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+  
+  
 <% end %>

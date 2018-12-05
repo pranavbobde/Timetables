@@ -3,8 +3,15 @@ class BookingsController < ApplicationController
   require 'bookings_logger'
   
   before_action :authenticate_user!
+  #before_action :ensure_admin, :only => [:edit, :destroy, :new]
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
+   # def ensure_admin
+  #   unless current_user && current_user.admin?
+  #   render :text => "Access Error Message", :status => :unauthorized
+  #   end
+  # end
+  
   # GET /bookings
   # GET /bookings.json
   def index
@@ -66,17 +73,9 @@ class BookingsController < ApplicationController
       end
     end
     #for logging the information
-    @booking.email = params[:booking][:email]
-    @booking.room_id = params[:booking][:room_id]
-    @booking.subject_id = params[:booking][:subject_id]
-    @booking.date = params[:booking][:date]
-    @booking.starttime = params[:booking][:starttime]
-    @booking.duration = params[:booking][:duration]
-    @booking.status = params[:booking][:status]
-    @booking.supervision = params[:booking][:supervision]
-    @description = [@booking.email, @booking.room_id, @booking.subject_id, @booking.date, @booking.starttime, @booking.duration, @booking.status, @booking.supervision].to_s
-    logger = BookingsLogger.instance
-    logger.logBookings("A Booking was updated" + @description.to_s)
+    @description = "A Booking was updated: "+ [@booking.email, @booking.room.name, @booking.subject.classname, @booking.date, @booking.starttime, @booking.duration, @booking.status, @booking.supervision].to_s + "by " + @useremail
+    BookingsLogger.instance.logBookings(@description)
+
   end
 
   # DELETE /bookings/1

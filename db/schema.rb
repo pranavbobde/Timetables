@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_02_173520) do
+ActiveRecord::Schema.define(version: 2018_12_04_194914) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -76,6 +76,8 @@ ActiveRecord::Schema.define(version: 2018_12_02_173520) do
     t.index ["course_id"], name: "index_subjects_on_course_id"
     t.index ["faculty_id"], name: "index_subjects_on_faculty_id"
   end
+
+
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
