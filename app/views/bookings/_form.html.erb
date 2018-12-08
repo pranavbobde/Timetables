@@ -28,6 +28,12 @@
 
   </div>
   
+   <div class="field">
+    <%= form.label :course_id %>
+    <%= form.select :course_id, options_for_select(Course.all.map{|s|[s.coursename, s.id]}) %>
+
+  </div>
+  
   <div class="field">
     <%= form.label :date %>
     <%= form.date_select :date %>

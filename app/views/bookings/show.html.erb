@@ -7,12 +7,17 @@
 
 <p>
   <strong>Room:</strong>
-  <%= @booking.room %>
+  <%= @booking.room.name %>
 </p>
 
 <p>
   <strong>Subject:</strong>
-  <%= @booking.subject %>
+  <%= @booking.subject.classname %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @booking.course.coursename%>
 </p>
 <p>
   <strong>Date:</strong>

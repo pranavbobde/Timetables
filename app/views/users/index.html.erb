@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+    <div class="container">
+      <div class="row">
+        
+      <h2>Welcome <%= current_user.firstname %></h2>
+      
+     
+      
+      <% else %>
+      <h2>Welcome Guest</h2>
+      </div>
+<% end %>
+
+<h3>Your Bookings</h3>
+
+
+<h3>Your Subjects</h3>

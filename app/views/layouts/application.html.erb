@@ -16,6 +16,8 @@
         
       <p>Signed in as... <%= current_user.email %></p>
       (<%= link_to 'Sign out', destroy_user_session_path,:method => :delete%>)
+     
+      
       <% else %>
       <%= link_to'Register', new_user_registration_path %> or
       <%= link_to'Sign in', new_user_session_path %>
@@ -41,6 +43,7 @@
             <li><a href="<%=subjects_path%>">Subjects</a></li>
             <li><a href="<%=bookings_path%>">Booking</a></li>
             <li><a href="<%=search_index_path%>">Search</a></li>
+            <li><a href="<%=users_path%>">Profile</a></li>
           </ul>
         </div>
       </nav>

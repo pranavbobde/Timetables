@@ -1,23 +1,31 @@
-<h1>Search#index</h1>
-<p>Find me in app/views/search/index.html.erb</p>
+ <h1>Master Search Function</h1>
+<p> Search by Room, Date or Subject</p>
 <%= form_tag(search_index_path, method: :get,  multipart: true) do %>
-  Store <%= text_field_tag :name %>
+  
+  Room: <%= select_tag :room_id, options_for_select(Room.all.map{|s|[s.name, s.id]}.insert(0,"") )%>
+  Subject: <%= select_tag :course_id, options_for_select(Course.all.map{|s|[s.coursename, s.id]}.insert(0,"")) %>
+  Class: <%= select_tag :subject_id, options_for_select(Subject.all.map{|s|[s.classname, s.id]}.insert(0,"")) %>
+  Date: <%= date_select :date,  :date, selected: @mydate%>
+
+
   <%= submit_tag 'submit' %>
 <% end %>
 
 
-<p><%=@txt %></p>
-
 <table>
     <tbody>
-      <h1>Room 1</h1>
     <% @rooms.each do |booking| %>
       <tr>
         <td>Email: <%= booking.email %></td>
         <td>Room: <%= booking.room.name %></td>
+        <td>Subject: <%= booking.subject.classname %></td>
+        <td>Course: <%= booking.course.coursename %></td>
         <td>Date: <%= booking.date %></td>
-        
       </tr>
     <% end %>  
     </tbody>
 </table>
+
+
+
+

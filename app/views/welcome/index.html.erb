@@ -2,6 +2,30 @@
 <p class="alert"><%= alert %></p>
 
 
+
+    
+    
+<table class="table">
+  <thead>
+    <tr>
+      <%Booking.starttimes.keys.each do |k| %>
+        <th scope="col"><%=k%></th>
+        <%end%>
+    </tr>
+  </thead>
+  <tbody>
+    <% Room.all.each do |l|%>
+    <tr>
+        <th><%= l.name %></th>
+        <td>hello</td>
+    </tr>
+    
+    <%end%>
+    
+    
+  </tbody>
+</table>
+
 <h1 class="page-header">Hello NCI</h1>
 <h2>This is the timetabling system</h2>
 <p><%=@hello%></p>
@@ -50,29 +74,6 @@
 
  
 
-    
-    
-<table class="table">
-  <thead>
-    <tr>
-      <%Booking.starttimes.keys.each do |k| %>
-        <th scope="col"><%=k%></th>
-      <% end %>
-    </tr>
-  </thead>
-  <tbody>
-    <%Room.all.each do |k|%>
-    <tr>
-        <th><%= k.name %></th>
-        <td>Hello</td>
-        <td>Hello</td>
-    </tr>
-    
-    <%end%>
-    
-    
-  </tbody>
-</table>
     
    
 

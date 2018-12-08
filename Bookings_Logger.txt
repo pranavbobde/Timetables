@@ -13,3 +13,65 @@ A Booking was createdHello ["test2", "101", "Web App Dev", Sun, 02 Dec 2018, "8a
 A Booking was created: ["davidlakelly@gmail.com", "302", "Web App Dev", Sun, 02 Dec 2018, "8am", "30 Minutes", "approved", true]
 A Booking was created: ["pra@123.c", "201", "Intro to Databases", Tue, 04 Dec 2018, "8:30am", "1 Hour", "pending", true]byadmin@email.com
 A Booking was created: ["xya@das.g", "303", "Software Engineering", Wed, 05 Dec 2018, "8:30am", "1.5 Hours", "approved", true]by pranavbobde@gmail.com
+A Booking was created: ["dd", "101", "Web App Dev", Thu, 06 Dec 2018, "8am", "30 Minutes", "pending", false]by 
+A Booking was created: ["", "201", "OOP", Thu, 06 Dec 2018, "8am", "30 Minutes", "pending", false]by 
+A Booking was created: ["", "204", "Web App Dev", Thu, 06 Dec 2018, "8am", "30 Minutes", "pending", false]by 
+A Booking was created: ["", "101", "Web App Dev", Thu, 06 Dec 2018, "8am", "30 Minutes", "pending", false]by 
+A Booking was created: ["prana@v.b", "316", "Intro To Digital Multimedia", Sat, 08 Dec 2018, "12:30pm", "1 Hour", "approved", true]by 
+A Booking was created: ["prana@v.b", "316", "Intro To Digital Multimedia", Sat, 08 Dec 2018, "1pm", "1 Hour", "approved", true]by 
+Hello world from model
+[:@attributes, :@aggregation_cache, :@association_cache, :@readonly, :@destroyed, :@marked_for_destruction, :@destroyed_by_association, :@new_record, :@_start_transaction_state, :@transaction_state, :@errors, :@_new_record_before_last_commit, :@validation_context, :@_already_called, :@mutations_from_database, :@mutations_before_last_save, :@attributes_changed_by_setter]
+davidlakelly@gmail.com
+A Booking has been made:  id:  
+ 51:  
+ email:  
+ davidlakelly@gmail.com:  
+ room_id:  
+ 65:  
+ subject_id:  
+ 41:  
+ starttime:  
+ 8am:  
+ duration:  
+ 30 Minutes:  
+ status:  
+ pending:  
+ supervision:  
+ false:  
+ created_at:  
+ 2018-12-07 22:35:10 UTC:  
+ updated_at:  
+ 2018-12-07 22:35:10 UTC:  
+ date:  
+ 2018-12-07:  
+A Booking has been made:  id: .  52: .  email: .  davidlakelly@gmail.com: .  room_id: .  65: .  subject_id: .  44: .  starttime: .  8am: .  duration: .  30 Minutes: .  status: .  pending: .  supervision: .  false: .  created_at: .  2018-12-07 22:36:11 UTC: .  updated_at: .  2018-12-07 22:36:11 UTC: .  date: .  2018-12-07: . 
+A Booking has been made: id:  ||53:  ||email:  ||davidlakelly@gmail.com:  ||room_id:  ||65:  ||subject_id:  ||42:  ||starttime:  ||8am:  ||duration:  ||30 Minutes:  ||status:  ||pending:  ||supervision:  ||false:  ||created_at:  ||2018-12-07 22:37:09 UTC:  ||updated_at:  ||2018-12-07 22:37:09 UTC:  ||date:  ||2018-12-07:  ||
+A Booking has been made: id: ||54: ||email: ||davidlakelly@gmail.com: ||room_id: ||65: ||subject_id: ||45: ||starttime: ||8am: ||duration: ||30 Minutes: ||status: ||pending: ||supervision: ||true: ||created_at: ||2018-12-07 22:37:56 UTC: ||updated_at: ||2018-12-07 22:37:56 UTC: ||date: ||2018-12-07: ||
+A Booking has been made: id: 55||email: davidlakelly@gmail.com||room_id: 65||subject_id: 39||starttime: 8am||duration: 30 Minutes||status: pending||supervision: false||created_at: 2018-12-07 22:38:20 UTC||updated_at: 2018-12-07 22:38:20 UTC||date: 2018-12-07||
+A Booking has been made: id: 56 --- email: davidlakelly@gmail.com --- room_id: 65 --- subject_id: 39 --- starttime: 8am --- duration: 30 Minutes --- status: pending --- supervision: false --- created_at: 2018-12-07 22:38:51 UTC --- updated_at: 2018-12-07 22:38:51 UTC --- date: 2018-12-07 --- 
+Hello
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
+I am from print details
