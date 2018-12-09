@@ -1,0 +1,9 @@
+<%= form_tag(uploader_index_path, multipart: true) do |form| %>
+  Room: <%= radio_button_tag 'type', 'Room', true %>
+  Subject: <%= radio_button_tag 'type', 'Subject' %>
+  Course: <%= radio_button_tag 'type', 'Course' %>
+  
+  <%= file_field_tag "file" %>
+
+  <%= submit_tag %>
+<% end %>
