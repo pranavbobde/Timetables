@@ -1,5 +1,4 @@
 class BookingAdapter
- 
    
    def initialize(x)
       @adaptee = x 
@@ -14,4 +13,5 @@ class BookingAdapter
       details = self.adapter
       return details
    end
+
 end

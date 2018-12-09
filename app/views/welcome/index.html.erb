@@ -4,21 +4,35 @@
 
 
     
-    
+<h1>Occupied List</h1>   
 <table class="table">
   <thead>
     <tr>
       <%Booking.starttimes.keys.each do |k| %>
         <th scope="col"><%=k%></th>
-        <%end%>
+      <%end%>
     </tr>
   </thead>
   <tbody>
-    <% Room.all.each do |l|%>
-    <tr>
-        <th><%= l.name %></th>
-        <td>hello</td>
-    </tr>
+    <% Room.where("id < ?", 75).each do |l|%>
+      
+      <tr>
+          <th><%= l.name %></th>
+          <%Booking.starttimes.values.each do |k| %>
+            <%if Booking.where(room: l, starttime: k, date: Date.today).present? %>
+            <td class="bg-primary" >                                        
+                
+                Occupied
+                
+                
+            </td>
+            
+            
+            <%else%>
+            <td> - </td>
+            <%end%>
+          <%end%>
+      </tr>
     
     <%end%>
     

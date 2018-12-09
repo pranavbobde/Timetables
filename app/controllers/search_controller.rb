@@ -32,38 +32,8 @@ class SearchController < ApplicationController
       
     end
     
-    #if params[:commit]
-    #   if params[:room_id] !="" and params[:subject_id] !=""
-          
-
-    #     #tmp = Room.find_by_name(params[:name])
-    #     #@rooms = Booking.find_by_name('jack').accounts.where(:bank_id => bank.id)
-    #     @rooms = Booking.includes(:room, :subject).where(:rooms => {id: params[:room_id]}, :subjects => {id: params[:subject_id]}, date: @mydate).references(:room, :subject)
-      
-    #   elsif params[:room_id] !="" and params[:subject_id] =""
-    #     @rooms = Booking.includes(:room).where(:rooms => {id: params[:room_id]}, date: @mydate).references(:room)
-
-    
-    #   elsif params[:room_id] ="" and params[:subject_id] !=""
-      
-    #     @rooms = Booking.includes(:subject).where(:subjects => {id: params[:subject_id]}, date: @mydate).references(:subject)
-
-    #   else
-    #     print "I ran"
-    #     @rooms = Booking.all.where(date: @mydate)
-    #   end
-    # else 
-    #   @rooms = Booking.all.where("date >= ?", Date.today)
-    # end
     
 
   
   end 
-  
-  
-  
-  def free
-    @test = "10"
-  
-  end
 end
